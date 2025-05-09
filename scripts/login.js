@@ -12,6 +12,9 @@ login_btn.addEventListener("click", () => {
 
     if (username === login_username.value && password === login_password.value) {
         window.location.replace("http://127.0.0.1:5500/index.html");
+
+        
+
     } else {
         console.log("username or password does not exist");
     }
