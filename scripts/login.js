@@ -7,6 +7,8 @@ login_btn.addEventListener("click", () => {
     // console.log(login_username.value);
     // console.log(login_password.value);
 
+    let err_msg = document.getElementById("err-msg");
+
     let username =  localStorage.getItem("username", login_username.value);
     let password = localStorage.getItem("password", login_password.value);
 
@@ -16,7 +18,7 @@ login_btn.addEventListener("click", () => {
         
 
     } else {
-        console.log("username or password does not exist");
+        err_msg.innerText = "username or password does not exist";
     }
 
 })

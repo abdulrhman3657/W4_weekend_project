@@ -16,7 +16,11 @@ comment_btn.addEventListener("click", () => {
     let username = localStorage.getItem("username")
 
     if(username == null){
-        console.log("you are not logged in");
+
+        let err_msg = document.getElementById("err-msg");
+        err_msg.innerText = "you must be logged in to comment";
+
+        console.log("you must be logged in to comment");
         return;
     }
 
