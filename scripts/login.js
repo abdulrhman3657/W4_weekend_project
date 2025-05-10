@@ -13,7 +13,13 @@ login_btn.addEventListener("click", () => {
     let password = localStorage.getItem("password", login_password.value);
 
     if (username === login_username.value && password === login_password.value) {
-        window.location.replace("http://127.0.0.1:5500/index.html");
+
+        // window.location.href = '../'; //one level up
+        // ../index.html
+
+        window.location.href = "../index.html";
+
+        // window.location.replace("http://127.0.0.1:5500/index.html");
 
         
 

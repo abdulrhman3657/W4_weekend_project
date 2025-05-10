@@ -47,7 +47,6 @@ comment_btn.addEventListener("click", () => {
     p2.classList.add("px-3");
     p2.innerText = comment_txt;
 
-    // localStorage.setItem("username_comment", username);
     localStorage.setItem("comment_txt", comment_txt);
 
     item_div.appendChild(p1);
