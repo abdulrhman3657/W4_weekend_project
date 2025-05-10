@@ -26,6 +26,9 @@ let type_btn = document.getElementById("type-btn");
 
 type_btn.addEventListener("click", () => {
 
+    let search = document.getElementById("search");
+    search.classList.add("d-none");
+
     let spaceship_input = document.getElementById("spaceship-input");
     let satellite_input = document.getElementById("satellite-input");
 
@@ -47,19 +50,23 @@ type_btn.addEventListener("click", () => {
             let img = document.createElement("img")
             img.src = arr[i].url
 
+            // img.width = "300"
+            img.classList.add("w-50");
+
             let title = document.createElement("h3");
             title.innerText = arr[i].title;
 
             let text = document.createElement("p");
             text.innerText = arr[i].post_text;
+
+            // div.classList.add("border");
+            // div.classList.add("d-flex");
             
             div.appendChild(img)
             div.appendChild(title)
             div.appendChild(text)
             place.appendChild(div)
         }
-
-
         
 
     } else if (satellite_input.checked) {
@@ -79,6 +86,8 @@ type_btn.addEventListener("click", () => {
 
             let img = document.createElement("img")
             img.src = arr[i].url
+
+            img.width = "300"
 
             let title = document.createElement("h3");
             title.innerText = arr[i].title;
