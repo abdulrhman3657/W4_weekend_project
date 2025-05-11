@@ -46,25 +46,51 @@ type_btn.addEventListener("click", () => {
             console.log(arr[i].title)
 
             let div = document.createElement("div")
+            div.classList.add("card");
+            div.classList.add("border-0");
+            div.classList.add("p-2");
+            div.classList.add("my-4");
+            div.classList.add("mx-4")
+            div.classList.add("rounded-3");
+            div.style.width = "18rem";
+            div.style.height = "35rem";
+
 
             let img = document.createElement("img")
             img.src = arr[i].url
+            img.classList.add("card-img-top");
+            img.style.height = "70%";
 
-            // img.width = "300"
-            img.classList.add("w-50");
+            let div_body = document.createElement("div")
+            div_body.classList.add("card-body")
+            div_body.classList.add("d-flex")
+            div_body.classList.add("flex-column")
+            div_body.classList.add("justify-content-between")
+
+            let inner_div = document.createElement("div")
 
             let title = document.createElement("h3");
             title.innerText = arr[i].title;
+            title.classList.add("card-title")
 
             let text = document.createElement("p");
             text.innerText = arr[i].post_text;
+            text.classList.add("card-text")
 
-            // div.classList.add("border");
-            // div.classList.add("d-flex");
-            
+
+            let card_btn = document.createElement("a");
+            card_btn.classList.add("btn")
+            card_btn.classList.add("btn-dark")
+            card_btn.innerText = "Read More"
+
+            inner_div.appendChild(title)
+            inner_div.appendChild(text)
+
+            div_body.appendChild(inner_div)
+            div_body.appendChild(card_btn)
+
             div.appendChild(img)
-            div.appendChild(title)
-            div.appendChild(text)
+            div.appendChild(div_body)
             place.appendChild(div)
         }
         
